@@ -1,28 +1,24 @@
 modules = {
 
     app {
-        dependsOn 'jquery, angular-resource, bootstrap'
-        resource url: 'css/main.css'
+        dependsOn 'jquery, angularResource, bootstrap'
         resource url: 'css/app.css'
-        resource url: 'angular/app/js/app.js'
-        resource url: 'angular/app/js/controllers.js'
-        resource url: 'angular/app/js/filters.js'
-        resource url: 'angular/app/js/services.js'
+        resource url: 'js/angular/app/js/angularApp.js'
     }
 
     bootstrap {
         dependsOn 'jquery'
-        resource url: 'bootstrap/css/bootstrap.min.css'
-        resource url: 'bootstrap/js/bootstrap.min.js'
+        resource url: 'js/bootstrap/css/bootstrap.min.css'
+        resource url: 'js/bootstrap/js/bootstrap.min.js'
     }
 
     angular {
-        resource id: 'js', url: [dir: 'angular/app/lib/angular', file: "angular.js"], nominify: true
+        resource id: 'js', url: [dir: 'js/angular/app/lib/angular', file: "angular.js"], nominify: true
     }
 
-    'angular-resource' {
+    angularResource {
         dependsOn 'angular'
-        resource id: 'js', url: [dir: 'angular/app/lib/angular', file: "angular-resource.js"], nominify: true
+        resource id: 'js', url: [dir: 'js/angular/app/lib/angular', file: "angular-resource.js"], nominify: true
     }
 
 }

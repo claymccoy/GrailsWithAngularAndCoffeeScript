@@ -89,3 +89,16 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+coffeescript.modules = {
+    angularApp {
+        String src = 'src/coffee/angular'
+        files "${src}/services", "${src}/filters", "${src}/controllers", "${src}/app"
+        output 'angular/app/js/angularApp.js'
+    }
+    angularTests {
+        String src = 'src/coffee/angular'
+        files "${src}/servicesSpec", "${src}/filtersSpec", "${src}/controllersSpec"
+        output 'angular/test/unit/angularTests.js'
+    }
+}
